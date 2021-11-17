@@ -27,7 +27,7 @@ vector<int> sortArr(vector<int> &nums)
         }
         else
         {
-            results[k] = nums[i] * nums[i];
+            results[k] = nums[i] * nums[i]; 
             ++i;
         }
         --k;

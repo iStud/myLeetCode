@@ -18,35 +18,6 @@ void printArr(vector<vector<int>> v)
     }
 }
 
-// vector<vector<int>> generateMatrix(int n)
-// {
-//     vector<vector<int>> res(n, vector<int>(n, 0));
-//     int top = 0;
-//     int right = n - 1;
-//     int bottom = n - 1;
-//     int left = 0;
-//     int num = 1;
-//     int end = n * n;
-//     while (num <= end)
-//     {
-//         for (int i = left; i <= right; i++)
-//             res[top][i] = num++; //i代表列---从左到右
-//         top++;
-
-//         for (int i = top; i <= bottom; i++)
-//             res[i][right] = num++; //i代表行---从上到下
-//         right--;
-
-//         for (int i = right; i >= left; i--)
-//             res[bottom][i] = num++; //i代表列---从右到左
-//         bottom--;
-
-//         for (int i = bottom; i >= top; i--)
-//             res[i][left] = num++; //i代表行---从下到上
-//         left++;
-//     }
-//     return res;
-// }
 
 vector<vector<int>> generateMatrix(int value)
 {

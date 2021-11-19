@@ -71,9 +71,12 @@ int listNodeLength(ListNode *node)
 // 插入指定节点
 ListNode *insertNode(ListNode *head, int pos, int val)
 {
-    ListNode *p = head;
+
+    ListNode *dummyNode = new ListNode;
+    dummyNode->next = head;
+    ListNode *p = dummyNode;
     int i = 1;
-    while (p != NULL && i < pos - 1)
+    while (p != NULL && i < pos)
     {
         p = p->next;
         i++;
@@ -86,15 +89,18 @@ ListNode *insertNode(ListNode *head, int pos, int val)
     p->next = node;
     node->next = tempNode;
 
-    return head;
+    return dummyNode->next;
 }
 
 // 删除指定节点
 ListNode *deleteNode(ListNode *head, int pos)
 {
-    ListNode *p = head;
+    ListNode *dummyNode = new ListNode;
+    dummyNode->next = head;
+    ListNode *p = dummyNode;
+
     int i = 1;
-    while (p != NULL && i < pos - 1)
+    while (p != NULL && i < pos)
     {
         p = p->next;
         ++i;
@@ -102,7 +108,7 @@ ListNode *deleteNode(ListNode *head, int pos)
 
     p->next = p->next->next;
 
-    return head;
+    return dummyNode->next;
 }
 
 int main()
@@ -114,11 +120,11 @@ int main()
     // cout << "长度为 " << length << endl;
 
     // cout << "插入" << endl;
-    // ListNode *newNode = insertNode(node, 2, 7);
+    // ListNode *newNode = insertNode(node, 3, 100);
     // printListNode(newNode);
 
     cout << "删除" << endl;
-    ListNode *newNode = deleteNode(node, 3);
+    ListNode *newNode = deleteNode(node, 4);
     printListNode(newNode);
 
     system("pause");

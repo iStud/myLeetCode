@@ -22,9 +22,9 @@ void printListNode(ListNode *node)
 
 ListNode *deleteNode(ListNode *head, int val)
 {
-    ListNode *tempNode = new ListNode;
-    tempNode->next = head;
-    ListNode *p = tempNode;
+    ListNode *tempNode = new ListNode; // 创建一个临时的节点，它指向第一个节点
+    tempNode->next = head; // 指向第一个节点
+    ListNode *p = tempNode; // p 指向这个临时节点
 
     while (p->next != NULL)
     {

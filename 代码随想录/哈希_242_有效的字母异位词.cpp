@@ -9,7 +9,7 @@ bool isAnagram(string s, string t)
     int record[26] = {0}; // 创建一个长度为26的数组，因为 a-z 共有26个。
     for (int i = 0; i < s.size(); i++)
     {
-
+        // s[i] 的意思：返回 s 中位置为 i 的字符
         record[s[i] - 'a']++; // 如果是相同元素那么它减去 a 后获取的下标值是相同的，然后取出元素做累加。
     }
 

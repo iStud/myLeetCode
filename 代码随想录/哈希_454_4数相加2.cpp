@@ -61,7 +61,7 @@ int main()
     D.push_back(0);
     D.push_back(2);
 
-    cout << "个数" << forNumAdd(A, B, C, D) << endl;
+    cout << "个数 " << forNumAdd(A, B, C, D) << endl;
 
     system("pause");
     return 0;

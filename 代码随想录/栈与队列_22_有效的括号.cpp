@@ -23,7 +23,7 @@ bool isValid(string s)
 
        }
       
-       else if (st.empty() || st.top() != s[i]) // (] 这种情况。
+       else if (st.empty() || st.top() != s[i]) // empty 排除 ([{}]))) 这种情况。 top 排除 (] 这种情况。
        {
            cout << st.top() << endl;
            return false;

@@ -56,7 +56,7 @@ int maxDepthLevelOrder(Node *root)
         for (int i = 0; i < size; i++)
         {
             Node *node = que.front();
-            que.pop();
+            que.pop(); // 先弹出队列中的一个节点。
             for (int j = 0; j < node->children.size() ; j++)
             {
                 if (node->children[j])

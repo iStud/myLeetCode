@@ -67,8 +67,6 @@ int main()
 
     searchBST(root);
 
-    cout << result << endl;
-
 
     system("pause");
     return 0;
